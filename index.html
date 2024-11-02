@@ -22,16 +22,27 @@
             padding: 20px;
         }
         .image {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .image img {
             max-width: 100%;
             height: auto;
             transition: transform 0.3s ease; /* Effet de transition pour le redimensionnement */
         }
-        .image img:hover {
+        .image:hover {
             transform: scale(1.1); /* Agrandir l'image au survol */
+        }
+        .left-image {
+            float: left;
+            margin-right: 20px; /* Espace à droite de l'image */
+            width: 30%; /* Largeur de l'image */
+        }
+        .right-image {
+            float: right;
+            margin-left: 20px; /* Espace à gauche de l'image */
+            width: 30%; /* Largeur de l'image */
+        }
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table; /* Permet de vider le float */
         }
         .section-title {
             font-size: 1.5em;
@@ -60,22 +71,20 @@
 </header>
 
 <section>
-    <div class="image">
-        <img src="asnieres1.jpg" alt="Maison Louis Vuitton à Asnières 1">
-    </div>
-    <div class="image">
-        <img src="asnieres2.jpg" alt="Maison Louis Vuitton à Asnières 2">
-    </div>
-    <div class="image">
-        <img src="asnieres3.jpg" alt="Maison Louis Vuitton à Asnières 3">
-    </div>
     <h2 class="section-title">L'Atelier Historique de Louis Vuitton</h2>
+    <div class="image">
+        <img src="asnieres1.jpg" alt="Maison Louis Vuitton à Asnières" class="image">
+    </div>
     <p>La maison Louis Vuitton à Asnières, un lieu emblématique de la région parisienne, allie la maison Art Nouveau du fondateur à des ateliers de fabrication de malles traditionnels et à un espace galerie rénové.</p>
 </section>
 
 <section>
     <h2 class="section-title">Les Fondations d'un Héritage</h2>
+    <div class="left-image">
+        <img src="asnieres2.jpg" alt="Atelier Louis Vuitton" class="image">
+    </div>
     <p>En 1859, seulement cinq ans après la création de sa marque éponyme, Louis Vuitton déplace son atelier à Asnières-sur-Seine. Cet emplacement offre un accès pratique à la Seine, permettant un transport facile du bois, un matériau clé pour la fabrication de malles. Aujourd'hui, le site continue de fabriquer des commandes spéciales pour des clients du monde entier et sert de hub pour le prototypage de pièces de mode.</p>
+    <div class="clearfix"></div>
 </section>
 
 <section>
@@ -86,7 +95,11 @@
 
 <section>
     <h2 class="section-title">Programme Inside LVMH</h2>
+    <div class="right-image">
+        <img src="asnieres3.jpg" alt="Programme Inside LVMH" class="image">
+    </div>
     <p>LVMH a lancé "Inside LVMH", une initiative unique pour les étudiants des écoles et universités européennes prestigieuses, ainsi que pour les stagiaires et apprentis. Cette plateforme numérique permet aux jeunes talents de s'engager sur des problématiques stratégiques et d'imaginer l'avenir des expériences de luxe. Les meilleurs participants ont des opportunités de rejoindre les 6 500 stagiaires et 1 000 diplômés recrutés chaque année par le groupe.</p>
+    <div class="clearfix"></div>
 </section>
 
 <footer>
