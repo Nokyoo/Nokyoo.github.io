@@ -8,66 +8,104 @@
         body {
             font-family: Arial, sans-serif;
             color: #333;
-            line-height: 1.5; /* Réduire l'interligne pour compacter le texte */
-            margin: 0; /* Supprimer les marges par défaut du corps */
-            padding: 0; /* Supprimer le padding par défaut du corps */
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
         }
+
         header {
-            background-color: #f4f4f4;
-            padding: 15px; /* Réduire le padding */
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
             text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+
         header h1 {
             margin: 0;
-            font-size: 2em; /* Augmenter la taille du titre */
+            font-size: 2.5em;
         }
+
+        header p {
+            font-size: 1.2em;
+        }
+
         section {
-            padding: 15px; /* Réduire le padding des sections */
-            margin: 10px; /* Ajouter un peu de marge autour des sections */
-            border-bottom: 1px solid #ccc; /* Ajouter une bordure pour délimiter les sections */
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
-        .image {
+
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .section-title {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #555;
+            text-align: center;
+        }
+
+        .image-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .image-container img {
             max-width: 100%;
             height: auto;
-            transition: transform 0.3s ease; /* Effet de transition pour le redimensionnement */
+            border-radius: 8px;
+            transition: transform 0.4s ease;
         }
-        .image:hover {
-            transform: scale(1.1); /* Agrandir l'image au survol */
+
+        .image-container:hover img {
+            transform: scale(1.05);
         }
-        .left-image {
-            float: left;
-            margin-right: 15px; /* Espace à droite de l'image */
-            width: 30%; /* Largeur de l'image */
+
+        .left-image, .right-image {
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
         }
-        .right-image {
-            float: right;
-            margin-left: 15px; /* Espace à gauche de l'image */
-            width: 30%; /* Largeur de l'image */
+
+        p {
+            margin: 10px 0;
+            font-size: 1.1em;
+            color: #666;
         }
+
         .clearfix::after {
             content: "";
             clear: both;
-            display: table; /* Permet de vider le float */
+            display: table;
         }
-        .section-title {
-            font-size: 1.8em; /* Augmenter la taille des titres des sections */
-            margin-bottom: 5px; /* Réduire la marge inférieure */
-            color: #333;
-        }
-        p {
-            margin-top: 0; /* Supprimer la marge supérieure des paragraphes */
-            margin-bottom: 10px; /* Ajuster la marge inférieure des paragraphes */
-        }
+
         footer {
-            background-color: #f4f4f4;
-            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
             text-align: center;
+            font-size: 0.9em;
+            margin-top: 20px;
         }
-        a {
-            color: #333;
+
+        footer a {
+            color: #ccc;
             text-decoration: none;
         }
-        a:hover {
+
+        footer a:hover {
+            color: #fff;
             text-decoration: underline;
         }
     </style>
@@ -81,43 +119,37 @@
 
 <section>
     <h2 class="section-title">L'Atelier Historique de Louis Vuitton</h2>
-    <div class="image">
-        <img src="asnieres.png" alt="Maison Louis Vuitton à Asnières" class="image">
+    <div class="image-container">
+        <img src="asnieres.png" alt="Maison Louis Vuitton à Asnières">
     </div>
     <p>La maison Louis Vuitton à Asnières, un lieu emblématique de la région parisienne, allie la maison Art Nouveau du fondateur à des ateliers de fabrication de malles traditionnels et à un espace galerie rénové. Cet atelier n'est pas seulement un lieu de production, mais aussi un symbole du savoir-faire exceptionnel qui a fait la renommée de la marque.</p>
-    
-    <p>Depuis sa fondation en 1854, Louis Vuitton a toujours placé l'artisanat au cœur de son activité. Chaque malle produite à Asnières est le résultat d'un travail minutieux, combinant des techniques artisanales ancestrales et des innovations modernes. Les artisans travaillent avec des matériaux de haute qualité, soigneusement sélectionnés pour garantir la durabilité et l'esthétique de chaque pièce.</p>
-
-    <p>Au fil des ans, l'atelier a évolué tout en préservant ses méthodes traditionnelles. Les visiteurs de la maison peuvent observer les artisans à l'œuvre, leur permettant d'apprécier la passion et le dévouement nécessaires à la création de chaque malle. Cela contribue à transmettre l'héritage de Louis Vuitton et à inspirer les générations futures d'artisans.</p>
-
-    <p>En plus de son rôle de fabrication, l'atelier d'Asnières sert également de centre d'innovation où de nouvelles idées de design sont développées. L'intégration de technologies modernes, comme la découpe au laser, permet de créer des designs plus complexes tout en maintenant les normes de qualité strictes. Cela illustre comment la maison Louis Vuitton allie tradition et modernité pour rester à la pointe de l'industrie du luxe.</p>
+    <p>Depuis sa fondation en 1854, Louis Vuitton a toujours placé l'artisanat au cœur de son activité. Chaque malle produite à Asnières est le résultat d'un travail minutieux, combinant des techniques artisanales ancestrales et des innovations modernes.</p>
+    <p>En plus de son rôle de fabrication, l'atelier d'Asnières sert également de centre d'innovation où de nouvelles idées de design sont développées. Cela illustre comment la maison Louis Vuitton allie tradition et modernité pour rester à la pointe de l'industrie du luxe.</p>
 </section>
 
 <section>
     <h2 class="section-title">Les Fondations d'un Héritage</h2>
-    <div class="left-image">
-        <img src="asnieres2.jpg" alt="Atelier Louis Vuitton" class="image">
+    <div class="image-container">
+        <img src="asnieres2.jpg" alt="Atelier Louis Vuitton">
     </div>
-    <p>En 1859, seulement cinq ans après la création de sa marque éponyme, Louis Vuitton déplace son atelier à Asnières-sur-Seine. Cet emplacement offre un accès pratique à la Seine, permettant un transport facile du bois, un matériau clé pour la fabrication de malles. Aujourd'hui, le site continue de fabriquer des commandes spéciales pour des clients du monde entier et sert de hub pour le prototypage de pièces de mode.</p>
-    <div class="clearfix"></div>
+    <p>En 1859, seulement cinq ans après la création de sa marque éponyme, Louis Vuitton déplace son atelier à Asnières-sur-Seine. Cet emplacement offre un accès pratique à la Seine, permettant un transport facile du bois, un matériau clé pour la fabrication de malles.</p>
 </section>
 
 <section>
-    <h2 class="section-title" style="text-align: center;">Exposition : La Malle Courrier</h2>
-    <div class="image" style="text-align: center;">
-        <img src="asnieres4.jpg" alt="Malle Courrier" class="image">
+    <h2 class="section-title">Exposition : La Malle Courrier</h2>
+    <div class="image-container">
+        <img src="asnieres4.jpg" alt="Malle Courrier">
     </div>
-    <p style="text-align: center;">La galerie d'Asnières présente la célèbre malle "Malle Courrier" dans une exposition moderne, célébrant son design innovant et léger de 1858. Cette création intemporelle incarne l'esprit de voyage et de luxe de la maison.</p>
-    <p style="text-align: center;"><strong>Dates de l'exposition :</strong> 23 mai 2023 - 17 février 2024</p>
+    <p>La galerie d'Asnières présente la célèbre malle "Malle Courrier" dans une exposition moderne, célébrant son design innovant et léger de 1858. Cette création intemporelle incarne l'esprit de voyage et de luxe de la maison.</p>
+    <p><strong>Dates de l'exposition :</strong> 23 mai 2023 - 17 février 2024</p>
 </section>
 
 <section>
     <h2 class="section-title">Programme Inside LVMH</h2>
-    <div class="right-image">
-        <img src="asnieres3.png" alt="Programme Inside LVMH" class="image">
+    <div class="image-container">
+        <img src="asnieres3.png" alt="Programme Inside LVMH">
     </div>
-    <p>LVMH a lancé "Inside LVMH", une initiative unique pour les étudiants des écoles et universités européennes prestigées, ainsi que pour les stagiaires et apprentis. Cette plateforme numérique permet aux jeunes talents de s'engager sur des problématiques stratégiques et d'imaginer l'avenir des expériences de luxe. Les meilleurs participants ont des opportunités de rejoindre les 6 500 stagiaires et 1 000 diplômés recrutés chaque année par le groupe.</p>
-    <div class="clearfix"></div>
+    <p>LVMH a lancé "Inside LVMH", une initiative unique pour les étudiants des écoles et universités européennes prestigées, ainsi que pour les stagiaires et apprentis. Cette plateforme numérique permet aux jeunes talents de s'engager sur des problématiques stratégiques et d'imaginer l'avenir des expériences de luxe.</p>
 </section>
 
 <footer>
@@ -126,3 +158,4 @@
 
 </body>
 </html>
+
